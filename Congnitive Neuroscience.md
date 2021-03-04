@@ -101,6 +101,8 @@ $\lambda=\sqrt{{r_m}\over{r_o+r_i}}$
 
 2. 复极化：膜电位从peak下降恢复到resting potential附近。由于回到了静息电位（钾离子平衡电位），很容易认为这又是钾离子主导的过程，也就是Goldman方程中钾离子通透性增加占主导。
 
+3. 超级化：电势低于静息电位的阶段。具有这个阶段是因为voltage-gated钾离子通道没有完全关闭，细胞膜对钾离子的通透性高于静息状态，因此膜电位更接近钾离子的平衡电位（比静息电位更负）。后续在Na-K Pump的调节下回到静息电位。
+
 
 
 **使用Voltage Clamp技术figure out动作电位膜生理：**
@@ -121,7 +123,7 @@ $\lambda=\sqrt{{r_m}\over{r_o+r_i}}$
 
 ![image-20210225121058020](Congnitive Neuroscience.assets/image-20210225121058020.png)
 
-根据一定的假设，可以通过**钠离子替代实验**的数据分别计算出钠离子电流和钾离子电流，再根据电位信息计算出电导。也就是可以计算出膜对钠离子、钾离子通透性的变化过程（与时间和电压相关）。
+根据一定的假设，可以通过**钠离子替代实验**（使用不能透过细胞膜的阳离子替代）的数据分别计算出钠离子电流和钾离子电流，再根据电位信息计算出电导。也就是可以计算出膜对钠离子、钾离子通透性的变化过程（与时间和电压相关）。
 
 > 也可以使用一些离子通道阻断剂来分别研究离子通透性，例如使用TTX阻断钠离子通道，TEA阻断钾离子通道。
 
@@ -132,6 +134,75 @@ $\lambda=\sqrt{{r_m}\over{r_o+r_i}}$
 具有可变的膜电导和固定的leaky current，内外电压固定
 
 ![image-20210225120911603](Congnitive Neuroscience.assets/image-20210225120911603.png)
+
+##### 离子通道的电压响应与失活
+
+门控离子通道开放一段时间后会自然失活（Inactivation），并在一段时间内无法再次开启。**离子通道的复活（Deinactivation）需要一个接近静息的电位信号**，也就是说复活也需要特殊的电压信息。
+
+实现电压门控**钠离子通道失活**与复活的结构基础大概是“门+塞子“模型。门A（activation gate）受到膜电压调控，达到阈值就开启，否则关闭；而门B（Inactivation Gate）关闭后需要受到静息电位刺激才会开启。
+
+而钾离子通道只有门A，但反应比较慢
+
+> **辨析：**
+>
+> Activation-Deactivation：是门A的行为。Activation是门A受到阈电压刺激开启，Deactivation是门A受到低电压刺激关闭。
+>
+> Inactivation-Deinactivation：是门B的行为。Inactivation是门B受高电压刺激关闭，Deinactivation是门B受到静息电位刺激开启。
+
+<img src="Congnitive Neuroscience.assets/image-20210304102148728.png" alt="image-20210304102148728" style="zoom:50%;" />
+
+门B关闭（Inactivation）在门A关闭（Deactivation）之前，如何观测到门
+
+A的关闭？——在门B关闭以前突降电压。
+
+**绝对不应期**：指Inactivation Gate关闭的阶段，刺激不能使钠离子通道开启，必须先回到静息电位才可以开启。
+
+**相对不应期（Refractory Period）**：指超级化阶段（例如动作电位中的超级化，注意此时已经过了绝对不应期），需要更大的电位差（刺激）才能达到阈电位。
+
+##### Hodgkin-Huxley Equation
+
+![image-20210304105729317](Congnitive Neuroscience.assets/image-20210304105729317.png)
+
+使用一组微分方程，定量描述动作电位的电流变化。方程包含：
+
+1）电压变化时，细胞膜电容的放电效果；2）钾离子电流（平均电导常数，驱动电压+一个可以描述钾离子通道的函数的四次方，这个函数可以用微分方程解出来）；3）钠离子电流（门A的三次方和门B的一次方）；4）leaky电流
+
+> 生理过程的数理建模，经过手打计算器验证可靠（怎么验证的呢？？）
+>
+> 总的来说是非常exciting的结果，毕竟单纯基于生理制作了有效的数理模型，好比是生命逻辑化的第一步
+>
+> 为什么是4次方？他们最初是通过数学特征猜测幂次，后来根据这个幂次提出模型，也许是有4个电荷敏感的感应系统。（通过电生理特征就可以制作模型了，tql）
+>
+> <img src="Congnitive Neuroscience.assets/image-20210304110933226.png" alt="image-20210304110933226" style="zoom:33%;" />
+
+##### Patch-Clamp Recording
+
+神奇的膜片钳技术，可以记录单个离子通道的信号
+
+![image-20210304111359997](Congnitive Neuroscience.assets/image-20210304111359997.png)
+
+##### 离子通道的结构
+
+钾离子通道选择性的基础：直径较大的钾离子可以与通道壁的氨基酸残基结合脱水，而钠离子不可以。
+
+<img src="Congnitive Neuroscience.assets/image-20210304113506070.png" alt="image-20210304113506070" style="zoom:50%;" /><img src="Congnitive Neuroscience.assets/image-20210304113519193.png" alt="image-20210304113519193" style="zoom:33%;" />
+
+
+
+##### 总结
+
+<img src="Congnitive Neuroscience.assets/image-20210304100458904.png" alt="image-20210304100458904" style="zoom: 39%;" /><img src="Congnitive Neuroscience.assets/image-20210304100517058.png" style="zoom:40%;" />
+
+> 研究进展：
+>
+> - 玻璃微电极：电势差阶段
+>   - 动作电位时相图
+>   - 电化学势平衡方程
+>   - 细胞膜横向传导的电路特征
+> - 电压钳技术：电流阶段
+>   - 电流分析，离子确定
+>   - 内向和外向电流
+>   - 细胞膜纵向传导的电路特征
 
 #### 突触与信号传递
 
