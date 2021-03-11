@@ -175,7 +175,7 @@ A的关闭？——在门B关闭以前突降电压。
 >
 > <img src="Congnitive Neuroscience.assets/image-20210304110933226.png" alt="image-20210304110933226" style="zoom:33%;" />
 
-##### Patch-Clamp Recording
+##### 膜片钳 Patch-Clamp Recording
 
 神奇的膜片钳技术，可以记录单个离子通道的信号
 
@@ -203,6 +203,52 @@ A的关闭？——在门B关闭以前突降电压。
 >   - 电流分析，离子确定
 >   - 内向和外向电流
 >   - 细胞膜纵向传导的电路特征
+> - 膜片钳技术
 
 #### 突触与信号传递
 
+神经细胞向靶细胞传递信息的三种方式：
+
+- 电突触 (Fast Synaptic Transmission)
+- **神经递质系统/化学突触 （Neurotransmiter System/Chemical Synapse）**
+- 其他化学信号 （细胞因子、激素等）
+
+> 认识的建立：认为大脑是认知的结构——生物电现象的发现——神经网络的观察和突触概念的提出——信号传递对电信号的依赖（心脏实验）——突触机制的阐明
+>
+> <img src="Congnitive Neuroscience.assets/image-20210311102450979.png" alt="image-20210311102450979" style="zoom:67%;" />
+
+##### 神经-肌肉接头的电生理
+
+刺激神经元，记录其轴突连接的肌肉表面的电位（终板电位，End Plate Potential），可以发现肌肉的动作电位特征：
+
+<img src="Congnitive Neuroscience.assets/image-20210311102842761.png" alt="image-20210311102842761" style="zoom:67%;" />
+
+当神经-肌肉处于低Ca2+高Mg2+环境下时，可以观察到肌肉电位的减弱（表现为EPP的**量子化（Quantal）**减弱，以及有概率failure）。
+
+<img src="Congnitive Neuroscience.assets/image-20210311104538162.png" alt="image-20210311104538162" style="zoom:50%;" />
+
+除此以外，在不施加刺激时，也可以观测到肌肉细胞膜"自发"的电位波动，称为微终板电位（mepp）。这种mpp似乎就是EPP的量子单位。
+
+> 通过电位记录我们可以估计产生某次epp对应的有效刺激数m：
+>
+> $m={{EPP\ 平均振幅}\over{MEPP\ 平均振幅}}$
+>
+> 同时考虑到刺激产生epp有failure概率，我们又可以认为：
+>
+> $m=n*p$ 其中n为总刺激数，p为刺激成功的概率；亦即Possion分布：
+>
+> <img src="Congnitive Neuroscience.assets/image-20210311105427407.png" alt="image-20210311105427407" style="zoom: 50%;" />
+
+##### 突触前膜生理
+
+实验表明，钙离子是决定突触前膜发出刺激的因素。
+
+> 阻断钙通道，即使神经元去极化也不引发EPP；保持静息电位，注入$Ca^{2+}$, 也有EPP产生。
+
+提取突触前膜蛋白，利用生化、遗传学方法对其性质和功能进行解析，发现了与神经-肌肉信号传递有关的一系列蛋白，尤其有一些响应钙离子的蛋白。
+
+> 膜泡通过SNARE锚定在突触前膜上，当感应到钙离子时，有Syt蛋白的形变，拉近膜泡与突触前膜的距离，引发融合释放。
+>
+> 而膜泡的形成则是Clathrin-Dynamin依赖的。
+>
+> <img src="Congnitive Neuroscience.assets/image-20210311110919950.png" alt="image-20210311110919950" style="zoom:33%;" /><img src="Congnitive Neuroscience.assets/image-20210311110928326.png" alt="image-20210311110928326" style="zoom:50%;" />
