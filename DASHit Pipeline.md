@@ -195,7 +195,6 @@
    seqtk seq -A ./data/NG-mix-rRNA_combined_R1.fastq > ./data/input.fasta
    #这里用了参数-a，对应的是read1 3'引物
    cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -o ./data/cut-input.fasta ./data/input.fasta
-   #
    
    
    #扫描全部PAM sites
