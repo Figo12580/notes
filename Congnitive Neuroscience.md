@@ -252,3 +252,16 @@ A的关闭？——在门B关闭以前突降电压。
 > 而膜泡的形成则是Clathrin-Dynamin依赖的。
 >
 > <img src="Congnitive Neuroscience.assets/image-20210311110919950.png" alt="image-20210311110919950" style="zoom:33%;" /><img src="Congnitive Neuroscience.assets/image-20210311110928326.png" alt="image-20210311110928326" style="zoom:50%;" />
+
+##### 神经递质
+
+定义：突触前膜内合成，Ca2+诱导释放，引发突触后膜受体反应
+
+神经递质有兴奋性和抑制性两种，取决于其最终对突触后细胞的作用。（抑制型神经递质也可能引发后膜去极化）
+
+![image-20210318100625139](Congnitive Neuroscience.assets/image-20210318100625139.png)
+
+
+
+
+
